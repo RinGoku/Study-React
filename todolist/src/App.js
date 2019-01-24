@@ -1,14 +1,20 @@
 import React, { Component } from 'react';
+import { Button, FormControl } from 'react-bootstrap';
 import logo from './logo.svg';
 import './App.css';
 
 class TodoInput extends Component {  
   render() {
     return (
-      <section>
-        <input type="text" value={this.props.todoInput} 
+      <section className="row">
+      <section className="col-sm-8">
+        <FormControl  type="text" value={this.props.todoInput} 
         onChange={this.props.updateInput}/>
-        <button onClick={this.props.clickItem}>追加</button>
+      </section>
+      <section className="col-sm-4">
+        <Button className="btn-success add-btn" 
+         onClick={this.props.clickItem}>追加</Button>
+      </section>
       </section>
     )
   }
@@ -18,9 +24,10 @@ class TodoList extends Component {
   render() {
     const propTodoList = this.props.todoList;
     const todoList = propTodoList.map((todo, index) => {
-      return (<li key={index}>
-              {todo}
-              <button onClick={() => this.props.removeTodo(index)}>×</button>
+      return (<li className="todo-item row justify-content-between" key={index}>
+              <span>{todo}</span>
+              <Button className="btn-danger" 
+              onClick={() => this.props.removeTodo(index)}>×</Button>
               </li>);
     });
     return (
@@ -60,6 +67,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+         <section className="container">
             <section>
               <TodoInput 
                clickItem={() => this.addTodo()}
@@ -73,6 +81,7 @@ class App extends Component {
                removeTodo={(i) => this.removeTodo(i)}
               />
             </section>
+          </section>
       </div>
     );
   }

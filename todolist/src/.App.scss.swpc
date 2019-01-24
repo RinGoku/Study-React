@@ -1,0 +1,13 @@
+@import url("../node_modules/bootstrap/dist/css/bootstrap.min.css");
+
+.todo-item {
+  height: 5vh;
+  width: 30vw;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  margin: 3px 0 3px 0;
+}
+
+.todo-item span {
+      margin: auto;
+}

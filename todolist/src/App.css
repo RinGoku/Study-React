@@ -1,0 +1,23 @@
+@import url("../node_modules/bootstrap/dist/css/bootstrap.min.css");
+
+.todo-item {
+  height: 5vh;
+  width: 30vw;
+  box-shadow: rgb(114, 114, 114) 0px 1px 3px 0px;
+  margin: 5px 0 5px 0;
+  padding: 5px;
+  transition: all 0.1s linear;
+}
+
+.add-btn {
+  height: 3.7vh;
+  margin-left: 5px;
+}
+
+.todo-item:hover {
+  box-shadow: rgb(114, 114, 114) 0px 7px 7px 0px;
+}
+
+.todo-item span {
+  margin: auto;
+}
