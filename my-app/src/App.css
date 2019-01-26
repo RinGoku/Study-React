@@ -5,3 +5,11 @@
   color: white; }
   .App-header:hover {
     background-color: black; }
+
+.color-unit {
+  min-width: 1px;
+  min-height: 1px; }
+
+.colors-wrapper {
+  display: flex;
+  flex-wrap: wrap; }
